@@ -27,22 +27,18 @@ do {
         path = desktopPath
     }
 
-    // `clear` keeps the launch command from staying visible in the terminal.
-    let command = "cd \(path.terminalPathEscaped()); clear; claude --dangerously-skip-permissions"
-    let source = """
-    tell application "Terminal"
-        activate
-        do script "\(command)"
-    end tell
-    """
-    guard let script = NSAppleScript(source: source) else {
-        throw OITLError.cannotCreateAppleScript
+    let ghosttyPath = "/Applications/Ghostty.app/Contents/MacOS/ghostty"
+    guard FileManager.default.fileExists(atPath: ghosttyPath) else {
+        throw OITLError.cannotFindGhostty
     }
-    var error: NSDictionary?
-    script.executeAndReturnError(&error)
-    if error != nil {
-        throw OITLError.cannotAccessTerminal
-    }
+
+    let process = Process()
+    process.executableURL = URL(fileURLWithPath: ghosttyPath)
+    process.arguments = [
+        "--working-directory=\(path)",
+        "--command=zsh -lic \"exec claude --dangerously-skip-permissions\"",
+    ]
+    try process.run()
 
 } catch {
     logw(error.localizedDescription)

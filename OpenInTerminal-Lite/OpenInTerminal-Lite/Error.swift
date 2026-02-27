@@ -12,8 +12,7 @@ enum OITLError: Error {
     
     case cannotGetTerminal
     case cannotAccessFinder
-    case cannotCreateAppleScript
-    case cannotAccessTerminal
+    case cannotFindGhostty
     
 }
 
@@ -27,10 +26,8 @@ extension OITLError : CustomStringConvertible {
             return "There is no default terminal. And user did not pick a terminal"
         case .cannotAccessFinder:
             return "Cannot access Finder, please check permissions."
-        case .cannotCreateAppleScript:
-            return "Cannot create AppleScript."
-        case .cannotAccessTerminal:
-            return "Cannot access Terminal, please check permissions."
+        case .cannotFindGhostty:
+            return "Cannot find Ghostty at /Applications/Ghostty.app."
         }
     }
 }

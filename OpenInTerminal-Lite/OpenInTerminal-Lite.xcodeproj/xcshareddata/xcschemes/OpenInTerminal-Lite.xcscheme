@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95163CDF2269F0C2007C006F"
-               BuildableName = "OpenInTerminal-Lite.app"
+               BuildableName = "openinclaude.app"
                BlueprintName = "OpenInTerminal-Lite"
                ReferencedContainer = "container:OpenInTerminal-Lite.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95163CDF2269F0C2007C006F"
-            BuildableName = "OpenInTerminal-Lite.app"
+            BuildableName = "openinclaude.app"
             BlueprintName = "OpenInTerminal-Lite"
             ReferencedContainer = "container:OpenInTerminal-Lite.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95163CDF2269F0C2007C006F"
-            BuildableName = "OpenInTerminal-Lite.app"
+            BuildableName = "openinclaude.app"
             BlueprintName = "OpenInTerminal-Lite"
             ReferencedContainer = "container:OpenInTerminal-Lite.xcodeproj">
          </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95163CDF2269F0C2007C006F"
-            BuildableName = "OpenInTerminal-Lite.app"
+            BuildableName = "openinclaude.app"
             BlueprintName = "OpenInTerminal-Lite"
             ReferencedContainer = "container:OpenInTerminal-Lite.xcodeproj">
          </BuildableReference>
